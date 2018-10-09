@@ -1,0 +1,99 @@
+# github.com/buger/jsonparser v0.0.0-20180910192245-6acdf747ae99
+github.com/buger/jsonparser
+# github.com/gin-contrib/cors v0.0.0-20181008113111-488de3ec974f
+github.com/gin-contrib/cors
+# github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7
+github.com/gin-contrib/sse
+# github.com/gin-gonic/gin v1.3.0
+github.com/gin-gonic/gin
+github.com/gin-gonic/gin/binding
+github.com/gin-gonic/gin/json
+github.com/gin-gonic/gin/render
+# github.com/go-stack/stack v1.8.0
+github.com/go-stack/stack
+# github.com/golang/protobuf v1.2.0
+github.com/golang/protobuf/proto
+# github.com/golang/snappy v0.0.0-20180518054509-2e65f85255db
+github.com/golang/snappy
+# github.com/json-iterator/go v1.1.5
+github.com/json-iterator/go
+# github.com/mattn/go-isatty v0.0.4
+github.com/mattn/go-isatty
+# github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+github.com/modern-go/concurrent
+# github.com/modern-go/reflect2 v1.0.1
+github.com/modern-go/reflect2
+# github.com/mongodb/mongo-go-driver v0.0.15
+github.com/mongodb/mongo-go-driver/bson
+github.com/mongodb/mongo-go-driver/bson/bsoncodec
+github.com/mongodb/mongo-go-driver/bson/objectid
+github.com/mongodb/mongo-go-driver/mongo
+github.com/mongodb/mongo-go-driver/bson/builder
+github.com/mongodb/mongo-go-driver/bson/decimal
+github.com/mongodb/mongo-go-driver/bson/elements
+github.com/mongodb/mongo-go-driver/bson/internal/llbson
+github.com/mongodb/mongo-go-driver/bson/parser
+github.com/mongodb/mongo-go-driver/bson/parser/ast
+github.com/mongodb/mongo-go-driver/core/command
+github.com/mongodb/mongo-go-driver/core/connstring
+github.com/mongodb/mongo-go-driver/core/description
+github.com/mongodb/mongo-go-driver/core/dispatch
+github.com/mongodb/mongo-go-driver/core/option
+github.com/mongodb/mongo-go-driver/core/readconcern
+github.com/mongodb/mongo-go-driver/core/readpref
+github.com/mongodb/mongo-go-driver/core/result
+github.com/mongodb/mongo-go-driver/core/session
+github.com/mongodb/mongo-go-driver/core/tag
+github.com/mongodb/mongo-go-driver/core/topology
+github.com/mongodb/mongo-go-driver/core/uuid
+github.com/mongodb/mongo-go-driver/core/writeconcern
+github.com/mongodb/mongo-go-driver/mongo/aggregateopt
+github.com/mongodb/mongo-go-driver/mongo/changestreamopt
+github.com/mongodb/mongo-go-driver/mongo/clientopt
+github.com/mongodb/mongo-go-driver/mongo/collectionopt
+github.com/mongodb/mongo-go-driver/mongo/countopt
+github.com/mongodb/mongo-go-driver/mongo/dbopt
+github.com/mongodb/mongo-go-driver/mongo/deleteopt
+github.com/mongodb/mongo-go-driver/mongo/distinctopt
+github.com/mongodb/mongo-go-driver/mongo/dropcollopt
+github.com/mongodb/mongo-go-driver/mongo/findopt
+github.com/mongodb/mongo-go-driver/mongo/indexopt
+github.com/mongodb/mongo-go-driver/mongo/insertopt
+github.com/mongodb/mongo-go-driver/mongo/listcollectionopt
+github.com/mongodb/mongo-go-driver/mongo/listdbopt
+github.com/mongodb/mongo-go-driver/mongo/replaceopt
+github.com/mongodb/mongo-go-driver/mongo/runcmdopt
+github.com/mongodb/mongo-go-driver/mongo/sessionopt
+github.com/mongodb/mongo-go-driver/mongo/transactionopt
+github.com/mongodb/mongo-go-driver/mongo/updateopt
+github.com/mongodb/mongo-go-driver/core/address
+github.com/mongodb/mongo-go-driver/core/version
+github.com/mongodb/mongo-go-driver/core/wiremessage
+github.com/mongodb/mongo-go-driver/internal
+github.com/mongodb/mongo-go-driver/core/auth
+github.com/mongodb/mongo-go-driver/core/compressor
+github.com/mongodb/mongo-go-driver/core/connection
+github.com/mongodb/mongo-go-driver/core/event
+github.com/mongodb/mongo-go-driver/mongo/mongoopt
+github.com/mongodb/mongo-go-driver/core/auth/internal/gssapi
+# github.com/ugorji/go/codec v0.0.0-20180927125128-99ea80c8b19a
+github.com/ugorji/go/codec
+# github.com/xdg/scram v0.0.0-20180814205039-7eeb5667e42c
+github.com/xdg/scram
+# github.com/xdg/stringprep v1.0.0
+github.com/xdg/stringprep
+# golang.org/x/crypto v0.0.0-20181001203147-e3636079e1a4
+golang.org/x/crypto/pbkdf2
+# golang.org/x/net v0.0.0-20181005035420-146acd28ed58
+golang.org/x/net/context
+# golang.org/x/sync v0.0.0-20180314180146-1d60e4601c6f
+golang.org/x/sync/semaphore
+# golang.org/x/sys v0.0.0-20181005133103-4497e2df6f9e
+golang.org/x/sys/unix
+# golang.org/x/text v0.3.0
+golang.org/x/text/unicode/norm
+golang.org/x/text/transform
+# gopkg.in/go-playground/validator.v8 v8.18.2
+gopkg.in/go-playground/validator.v8
+# gopkg.in/yaml.v2 v2.2.1
+gopkg.in/yaml.v2

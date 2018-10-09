@@ -1,0 +1,20 @@
+version: '2'
+services:
+  playlist:
+    build: micrometafyplaylist-go
+    links:
+      - db
+    ports:
+      - 8081:8080
+  query:
+    build: micrometafyquery-go
+    ports:
+      - 8080:8080
+  nginx:
+    build: webapp
+    ports:
+      - 80:80
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
