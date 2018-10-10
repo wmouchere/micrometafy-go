@@ -23,41 +23,43 @@ document.getElementById('query').onkeydown = function(e){
 
             tracks = JSON.parse(req.response);
             console.log(tracks);
-
+            
             let info = "";
-            let i = 0;
-            info += `<h1>Results</h1>`
-            info += `<ol>`
-            tracks.forEach(function (t) {
-                info += `<li>
-                            <img src="/img/${t.origin}.png" class="api-image">
-                            ${t.name} -- ${t.author}   
-                            <i class="fas fa-clock"></i>
-                            ${Math.floor(t.duration/60000)}min${Math.floor(t.duration%60000/1000)}s.\t`
+            if (tracks !== null) {
+                let i = 0;
+                info += `<h1>Results</h1>`
+                info += `<ol>`
+                tracks.forEach(function (t) {
+                    info += `<li>
+                                <img src="/img/${t.origin}.png" class="api-image">
+                                ${t.name} -- ${t.author}   
+                                <i class="fas fa-clock"></i>
+                                ${Math.floor(t.duration/60000)}min${Math.floor(t.duration%60000/1000)}s.\t`
 
-                //Display play button only if link for preview is available
-                if(t.url != undefined){
-                    info += `<button type="submit" onclick="playTrack('${t.url}')" class="pure-button"><i class="fas fa-play"></i></button>`
-                }
-                
-                info += `<div class="dropdown">
-                            <button type="submit" onclick="dropDown(${i})" class="dropbtn pure-button button-add">
-                                <i class="fas fa-plus dropbtn"></i>
-                            </button>
-                            <div id="dropdown${i}" class="dropdown-content">
-                            <a href="playlists.html" class="button"><i class="fas fa-plus"></i>\tNew playlist</a>`
-                            
-                playlists.forEach(function (p) {
-                                info += `<label onclick="add(${i}, '${p.id}')">${p.name}</label>`
+                    //Display play button only if link for preview is available
+                    if(t.url != undefined){
+                        info += `<button type="submit" onclick="playTrack('${t.url}')" class="pure-button"><i class="fas fa-play"></i></button>`
+                    }
+                    
+                    info += `<div class="dropdown">
+                                <button type="submit" onclick="dropDown(${i})" class="dropbtn pure-button button-add">
+                                    <i class="fas fa-plus dropbtn"></i>
+                                </button>
+                                <div id="dropdown${i}" class="dropdown-content">
+                                <a href="playlists.html" class="button"><i class="fas fa-plus"></i>\tNew playlist</a>`
+                    if (playlists !== null) {            
+                        playlists.forEach(function (p) {
+                                        info += `<label onclick="add(${i}, '${p.id}')">${p.name}</label>`
+                        })
+                    }
+
+                    info +=     `</div>
+                            </div>`       
+                    info += `</li>`;
+                    i++;
                 });
-
-                info +=     `</div>
-                        </div>`       
-                            
-                info += `</li>`;
-                i++;
-            });
-            info += `</ol>`
+                info += `</ol>`
+            }
             document.getElementById('info').innerHTML = info;
         } else {
             document.getElementById('info').innerHTML = "Cannot be retrieved";

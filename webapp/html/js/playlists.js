@@ -64,35 +64,37 @@ function findAllPlaylists() {
             console.log(playlists);
             
             let info = "";
-            playlists.forEach(function (p) {
-                let urls = [];
-                p.tracks.forEach(function (t) {
-                    urls.push(t.url);
-                });
-                playlistTracks.set(p.id, urls);
-                info += `<div name="playlist">`
-                info += `<label class="playlist-title">${p.name}\t</label>`
-                info += `<button type="submit" onclick="playTracks('${p.id}')" class="pure-button"><i class="fas fa-play"></i></button>`
-                info += `<button type="submit" value="Supprimer" class="pure-button button-delete"><i class="fas fa-trash"></i></button>`
-                info += `<input name="data" type="hidden" value=${encodeURIComponent(JSON.stringify(p))} />`
-                info += `<ol>`
-                p.tracks.forEach(function (t) {
-                    info += `<li>
-                    <img src="/img/${t.origin}.png" class="api-image">
-                    ${t.name} -- ${t.author}   
-                    <i class="fas fa-clock"></i>
-                    ${Math.floor(t.duration/60000)}min${Math.floor(t.duration%60000/1000)}s.\t`
+            if (playlists !== null) {
+                playlists.forEach(function (p) {
+                    let urls = [];
+                    p.tracks.forEach(function (t) {
+                        urls.push(t.url);
+                    });
+                    playlistTracks.set(p.id, urls);
+                    info += `<div name="playlist">`
+                    info += `<label class="playlist-title">${p.name}\t</label>`
+                    info += `<button type="submit" onclick="playTracks('${p.id}')" class="pure-button"><i class="fas fa-play"></i></button>`
+                    info += `<button type="submit" value="Supprimer" class="pure-button button-delete"><i class="fas fa-trash"></i></button>`
+                    info += `<input name="data" type="hidden" value=${encodeURIComponent(JSON.stringify(p))} />`
+                    info += `<ol>`
+                    p.tracks.forEach(function (t) {
+                        info += `<li>
+                        <img src="/img/${t.origin}.png" class="api-image">
+                        ${t.name} -- ${t.author}   
+                        <i class="fas fa-clock"></i>
+                        ${Math.floor(t.duration/60000)}min${Math.floor(t.duration%60000/1000)}s.\t`
 
-                    //Display play button only if link for preview is available
-                    if(t.url != undefined){
-                        info += `<button type="submit" onclick="playTrack('${t.url}')" class="pure-button"><i class="fas fa-play"></i></button>`
-                    }
-                    info += `</li>`;
+                        //Display play button only if link for preview is available
+                        if(t.url != undefined){
+                            info += `<button type="submit" onclick="playTrack('${t.url}')" class="pure-button"><i class="fas fa-play"></i></button>`
+                        }
+                        info += `</li>`;
+                    })
+                    
+                    info += `</ol>`
+                    info += `</div>`
                 })
-                
-                info += `</ol>`
-                info += `</div>`
-            });
+            }
             document.getElementById('info').innerHTML = info;
         } else {
             document.getElementById('info').innerHTML = "Cannot be retrieved";
@@ -107,6 +109,7 @@ function findAllPlaylists() {
                 req2.onreadystatechange = update();
                 req2.open("DELETE", serverPlaylist + "playlist/" + data.id, true);
                 req2.send();
+                findAllPlaylists()
             }
         }
     };
